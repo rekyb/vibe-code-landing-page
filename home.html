@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Future Skills Forum 2025</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="nav-shell" aria-label="Primary">
+      <nav class="nav-bar">
+        <div class="nav-left">
+          <button class="nav-link" data-target="#hero" type="button">Home</button>
+          <button class="nav-link" data-target="#speakers" type="button">Speakers</button>
+          <button class="nav-link" data-target="#agenda" type="button">Agenda</button>
+        </div>
+        <div class="nav-right">
+          <button class="nav-toggle" id="theme-toggle" type="button" aria-pressed="false">
+            <span class="nav-toggle-track" aria-hidden="true">
+              <span class="nav-toggle-icon nav-toggle-icon--moon">
+                <img src="icons/moon.svg" alt="" />
+              </span>
+              <span class="nav-toggle-icon nav-toggle-icon--sun">
+                <img src="icons/sun.svg" alt="" />
+              </span>
+            </span>
+            <span class="nav-toggle-thumb" aria-hidden="true"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main class="hero" id="hero">
+      <div class="hero-media" aria-hidden="true">
+        <img src="img/1.jpg" alt="" class="is-active" />
+        <img src="img/2.jpg" alt="" />
+        <img src="img/3.jpg" alt="" />
+        <img src="img/4.jpg" alt="" />
+        <img src="img/5.jpg" alt="" />
+      </div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <section class="hero-inner" aria-label="Hero">
+        <h1>Future Skills Forum 2025</h1>
+        <p class="subtitle">
+          The conference for AI, digital transformation, and the future workforce
+        </p>
+        <ul class="meta" aria-label="Event details">
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path
+                d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1.5A2.5 2.5 0 0 1 22 6.5v13A2.5 2.5 0 0 1 19.5 22h-15A2.5 2.5 0 0 1 2 19.5v-13A2.5 2.5 0 0 1 4.5 4H6V3a1 1 0 0 1 1-1Zm12.5 8h-15v9.5c0 .276.224.5.5.5h15a.5.5 0 0 0 .5-.5V10ZM19.5 6H18v1a1 1 0 1 1-2 0V6H8v1a1 1 0 0 1-2 0V6H4.5a.5.5 0 0 0-.5.5V8h18V6.5a.5.5 0 0 0-.5-.5Z"
+              />
+            </svg>
+            <span>Date: July 15, 2025.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path
+                d="M12 2c3.866 0 7 3.134 7 7 0 5.25-7 13-7 13S5 14.25 5 9c0-3.866 3.134-7 7-7Zm0 2a5 5 0 0 0-5 5c0 3.64 3.91 9.12 5 10.55 1.09-1.43 5-6.91 5-10.55a5 5 0 0 0-5-5Zm0 2.25A2.75 2.75 0 1 1 12 11.75a2.75 2.75 0 0 1 0-5.5Z"
+              />
+            </svg>
+            <span>Location: Jakarta Convention Center, Indonesia</span>
+          </li>
+        </ul>
+        <p class="hero-countdown-title">Early Bird Ends In</p>
+        <div class="hero-countdown" aria-label="Time left before event starts">
+            <div class="hero-countdown-time">
+            <span id="countdown-hours">24</span>
+            <span class="hero-countdown-separator">:</span>
+            <span id="countdown-minutes">00</span>
+            <span class="hero-countdown-separator">:</span>
+            <span id="countdown-seconds">00</span>
+          </div>
+          <div class="hero-countdown-labels" aria-hidden="true">
+            <span>Hours</span>
+            <span>Minutes</span>
+            <span>Seconds</span>
+          </div>
+        </div>
+        <div class="hero-cta">
+          <a class="cta" href="#register" role="button">
+            <span>Register Now!</span>
+          </a>
+
+        </div>
+      </section>
+    </main>
+    <section class="speakers" id="speakers" aria-label="Speakers">
+      <div class="speakers-inner">
+        <h2>Speakers</h2>
+        <div class="speaker-grid">
+          <article class="speaker-card">
+            <div class="speaker-head">
+              <div class="speaker-avatar">
+                <img
+                  src="persona/christina-wocintechchat-com-m-0Zx1bDv5BNY-unsplash.jpg"
+                  alt="Speaker photo"
+                />
+              </div>
+              <div>
+                <h3 class="speaker-name">Christina Wocintechchat</h3>
+                <p class="speaker-role">Learning Experience Lead, Nusantara Futures Lab</p>
+              </div>
+            </div>
+            <p class="speaker-talk-label">Talk</p>
+            <p class="speaker-talk-title">Designing Human-Centered AI Upskilling Journeys</p>
+          </article>
+
+          <article class="speaker-card">
+            <div class="speaker-head">
+              <div class="speaker-avatar">
+                <img
+                  src="persona/jake-nackos-IF9TK5Uy-KI-unsplash.jpg"
+                  alt="Speaker photo"
+                />
+              </div>
+              <div>
+                <h3 class="speaker-name">Jake Nackos</h3>
+                <p class="speaker-role">AI Product Lead, Meridian Labs</p>
+              </div>
+            </div>
+            <p class="speaker-talk-label">Talk</p>
+            <p class="speaker-talk-title">From Pilots to Practice: Making AI Skills Stick at Work</p>
+          </article>
+
+          <article class="speaker-card">
+            <div class="speaker-head">
+              <div class="speaker-avatar">
+                <img
+                  src="persona/jurica-koletic-7YVZYZeITc8-unsplash.jpg"
+                  alt="Speaker photo"
+                />
+              </div>
+              <div>
+                <h3 class="speaker-name">Jurica Koletic</h3>
+                <p class="speaker-role">Head of Talent &amp; Culture, Archipelago Group</p>
+              </div>
+            </div>
+            <p class="speaker-talk-label">Talk</p>
+            <p class="speaker-talk-title">Future-Ready Workforce: Building a Culture of Continuous Learning</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="speakers" id="agenda" aria-label="Agenda timeline">
+      <div class="speakers-inner">
+        <div class="timeline">
+          <h2>Agenda</h2>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <div class="timeline-flag">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm1 3a1 1 0 0 1 1 1v3.59l2.1 2.1a1 1 0 1 1-1.42 1.42l-2.39-2.4A1 1 0 0 1 12 12V8a1 1 0 0 1 1-1Z"
+                  />
+                </svg>
+                <span>09:00</span>
+              </div>
+              <div class="timeline-card">
+                <p class="timeline-title">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path
+                      d="M12 2a2 2 0 0 1 2 2v1h3a2 2 0 0 1 2 2v2a7 7 0 1 1-14 0V7a2 2 0 0 1 2-2h3V4a2 2 0 0 1 2-2Zm-5 7a5 5 0 1 0 10 0V7H7v2Zm5-5h-0a.0.0 0 0 0 0 0v1h2V4h-2Z"
+                    />
+                  </svg>
+                  <span>Opening</span>
+                </p>
+              </div>
+              <div class="timeline-node" aria-hidden="true">
+                <div class="timeline-dot"></div>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-flag">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm1 3a1 1 0 0 1 1 1v3.59l2.1 2.1a1 1 0 1 1-1.42 1.42l-2.39-2.4A1 1 0 0 1 12 12V8a1 1 0 0 1 1-1Z"
+                  />
+                </svg>
+                <span>10:00</span>
+              </div>
+              <div class="timeline-card">
+                <p class="timeline-title">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path
+                      d="M7 9a3 3 0 1 1 3 3 3 3 0 0 1-3-3Zm7 3a3 3 0 1 1 0-6 3 3 0 0 1 0 6ZM3.5 20a4.5 4.5 0 0 1 7.92-2.93A4.5 4.5 0 0 1 20.5 20a1 1 0 1 1-2 0 2.5 2.5 0 0 0-4.24-1.82 1 1 0 0 1-1.52 0A2.5 2.5 0 0 0 5.5 20a1 1 0 1 1-2 0Z"
+                    />
+                  </svg>
+                  <span>Panel Discussion</span>
+                </p>
+              </div>
+              <div class="timeline-node" aria-hidden="true">
+                <div class="timeline-dot"></div>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-flag">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm1 3a1 1 0 0 1 1 1v3.59l2.1 2.1a1 1 0 1 1-1.42 1.42l-2.39-2.4A1 1 0 0 1 12 12V8a1 1 0 0 1 1-1Z"
+                  />
+                </svg>
+                <span>13:00</span>
+              </div>
+              <div class="timeline-card">
+                <p class="timeline-title">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path
+                      d="M14.7 6.3a1 1 0 0 1 0 1.4l-1 1 2.6 2.6 1-1a1 1 0 1 1 1.4 1.4l-1 1 1.1 1.1a2 2 0 0 1 0 2.8l-1.2 1.2a2 2 0 0 1-2.8 0l-1.1-1.1-5.6 5.6a1 1 0 0 1-.7.3H4a1 1 0 0 1-1-1v-3.4a1 1 0 0 1 .3-.7l5.6-5.6-1.1-1.1a2 2 0 0 1 0-2.8l1.2-1.2a2 2 0 0 1 2.8 0l1.1 1.1 1-1a1 1 0 0 1 1.4 0ZM6.41 20H6v-.41l5.17-5.17.41.41L6.41 20Z"
+                    />
+                  </svg>
+                  <span>Workshop</span>
+                </p>
+              </div>
+              <div class="timeline-node" aria-hidden="true">
+                <div class="timeline-dot"></div>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-flag">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm1 3a1 1 0 0 1 1 1v3.59l2.1 2.1a1 1 0 1 1-1.42 1.42l-2.39-2.4A1 1 0 0 1 12 12V8a1 1 0 0 1 1-1Z"
+                  />
+                </svg>
+                <span>15:00</span>
+              </div>
+              <div class="timeline-card">
+                <p class="timeline-title">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path
+                      d="M12 4a8 8 0 1 1-5.66 13.66A1 1 0 0 1 6 16h2.59l-1.3-1.29a1 1 0 1 1 1.42-1.42L11 16.17l2.29-2.88a1 1 0 1 1 1.56 1.24l-3.06 3.85a1 1 0 0 1-.76.37H7a1 1 0 0 1-.7-.29A8 8 0 0 1 12 4Z"
+                    />
+                  </svg>
+                  <span>Closing Ceremony</span>
+                </p>
+              </div>
+              <div class="timeline-node" aria-hidden="true">
+                <div class="timeline-dot"></div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <section class="register" id="register" aria-label="Registration form">
+      <div class="register-inner">
+        <h2>Registration</h2>
+        <div class="register-card">
+          <form>
+            <div class="form-grid">
+              <div class="field full">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="org">Organization</label>
+                <input id="org" name="organization" type="text" autocomplete="organization" />
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="submit" type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer aria-label="Footer">
+      <div class="footer-inner">
+        <div class="footer-meta">Organized by KOBO</div>
+        <div class="footer-meta">© 2026</div>
+      </div>
+    </footer>
+    <div class="snackbar" id="snackbar" role="status" aria-live="polite"></div>
+    <script src="home.js"></script>
+  </body>
+</html>
