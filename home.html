@@ -17,6 +17,7 @@
     <header class="nav-shell" aria-label="Primary">
       <nav class="nav-bar">
         <div class="nav-left">
+          <span class="nav-indicator" aria-hidden="true"></span>
           <button class="nav-link" data-target="#hero" type="button">Home</button>
           <button class="nav-link" data-target="#speakers" type="button">Speakers</button>
           <button class="nav-link" data-target="#agenda" type="button">Agenda</button>
@@ -160,7 +161,7 @@
                     d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm1 3a1 1 0 0 1 1 1v3.59l2.1 2.1a1 1 0 1 1-1.42 1.42l-2.39-2.4A1 1 0 0 1 12 12V8a1 1 0 0 1 1-1Z"
                   />
                 </svg>
-                <span>09:00</span>
+                <span>09:00 GMT+7</span>
               </div>
               <div class="timeline-card">
                 <p class="timeline-title">
@@ -169,7 +170,7 @@
                       d="M12 2a2 2 0 0 1 2 2v1h3a2 2 0 0 1 2 2v2a7 7 0 1 1-14 0V7a2 2 0 0 1 2-2h3V4a2 2 0 0 1 2-2Zm-5 7a5 5 0 1 0 10 0V7H7v2Zm5-5h-0a.0.0 0 0 0 0 0v1h2V4h-2Z"
                     />
                   </svg>
-                  <span>Opening</span>
+                  <span>Opening Ceremony</span>
                 </p>
               </div>
               <div class="timeline-node" aria-hidden="true">
@@ -183,7 +184,7 @@
                     d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm1 3a1 1 0 0 1 1 1v3.59l2.1 2.1a1 1 0 1 1-1.42 1.42l-2.39-2.4A1 1 0 0 1 12 12V8a1 1 0 0 1 1-1Z"
                   />
                 </svg>
-                <span>10:00</span>
+                <span>10:00 GMT+7</span>
               </div>
               <div class="timeline-card">
                 <p class="timeline-title">
@@ -206,7 +207,30 @@
                     d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm1 3a1 1 0 0 1 1 1v3.59l2.1 2.1a1 1 0 1 1-1.42 1.42l-2.39-2.4A1 1 0 0 1 12 12V8a1 1 0 0 1 1-1Z"
                   />
                 </svg>
-                <span>13:00</span>
+                <span>12:00 GMT+7</span>
+              </div>
+              <div class="timeline-card">
+                <p class="timeline-title">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path
+                      d="M5 6a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v5.5a3.5 3.5 0 0 1-5.2 3.04L12 16.38l-1.8-1.84A3.5 3.5 0 0 1 5 11.5V6Zm3-1a1 1 0 0 0-1 1v5.5a1.5 1.5 0 0 0 2.49 1.14L12 10.59l2.51 2.05A1.5 1.5 0 0 0 17 11.5V6a1 1 0 0 0-1-1H8Z"
+                    />
+                  </svg>
+                  <span>Breakout Session</span>
+                </p>
+              </div>
+              <div class="timeline-node" aria-hidden="true">
+                <div class="timeline-dot"></div>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-flag">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm1 3a1 1 0 0 1 1 1v3.59l2.1 2.1a1 1 0 1 1-1.42 1.42l-2.39-2.4A1 1 0 0 1 12 12V8a1 1 0 0 1 1-1Z"
+                  />
+                </svg>
+                <span>13:00 GMT+7</span>
               </div>
               <div class="timeline-card">
                 <p class="timeline-title">
@@ -229,7 +253,7 @@
                     d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm1 3a1 1 0 0 1 1 1v3.59l2.1 2.1a1 1 0 1 1-1.42 1.42l-2.39-2.4A1 1 0 0 1 12 12V8a1 1 0 0 1 1-1Z"
                   />
                 </svg>
-                <span>15:00</span>
+                <span>15:00 GMT+7</span>
               </div>
               <div class="timeline-card">
                 <p class="timeline-title">
@@ -257,7 +281,7 @@
             <div class="form-grid">
               <div class="field full">
                 <label for="name">Name</label>
-                <input id="name" name="name" type="text" autocomplete="name" required />
+                <input id="name" name="name" type="text" autocomplete="name" placeholder="Enter your full name" required />
               </div>
               <div class="field">
                 <label for="email">Email</label>
@@ -266,12 +290,13 @@
                   name="email"
                   type="email"
                   autocomplete="email"
+                  placeholder="Enter your email"
                   required
                 />
               </div>
               <div class="field">
                 <label for="org">Organization</label>
-                <input id="org" name="organization" type="text" autocomplete="organization" />
+                <input id="org" name="organization" type="text" autocomplete="organization" placeholder="What organization you represent?" />
               </div>
             </div>
             <div class="form-actions">
@@ -281,13 +306,177 @@
         </div>
       </div>
     </section>
+    <section class="faq" id="faq" aria-label="Frequently asked questions">
+      <div class="faq-inner">
+        <h2>FAQ</h2>
+        <p class="faq-intro">
+          Answers to common questions about Future Skills Forum 2025.
+        </p>
+        <div class="faq-list" role="list">
+          <article class="faq-item is-open">
+            <button class="faq-trigger" type="button" aria-expanded="true">
+              <span class="faq-question">
+                1. What is Future Skills Forum 2025 about?
+              </span>
+              <span class="faq-icon" aria-hidden="true">
+                <span class="faq-plus"></span>
+              </span>
+            </button>
+            <div class="faq-panel" role="region">
+              <p>
+                Future Skills Forum 2025 is a one-day conference focused on AI,
+                digital transformation, and the future workforce. You will hear
+                from leaders who are already re-shaping how people learn and work.
+              </p>
+            </div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span class="faq-question">
+                2. Who should attend the event?
+              </span>
+              <span class="faq-icon" aria-hidden="true">
+                <span class="faq-plus"></span>
+              </span>
+            </button>
+            <div class="faq-panel" role="region">
+              <p>
+                The forum is ideal for HR and L&amp;D leaders, business executives,
+                team managers, educators, and anyone responsible for preparing
+                people for AI-powered, digital-first work.
+              </p>
+            </div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span class="faq-question">
+                3. What topics will be covered?
+              </span>
+              <span class="faq-icon" aria-hidden="true">
+                <span class="faq-plus"></span>
+              </span>
+            </button>
+            <div class="faq-panel" role="region">
+              <p>
+                Sessions will cover practical AI use cases at work, reskilling and
+                upskilling strategies, digital literacy, leadership in the age of
+                automation, and how to design future-ready learning programs.
+              </p>
+            </div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span class="faq-question">
+                4. Is the event in-person or hybrid?
+              </span>
+              <span class="faq-icon" aria-hidden="true">
+                <span class="faq-plus"></span>
+              </span>
+            </button>
+            <div class="faq-panel" role="region">
+              <p>
+                Future Skills Forum 2025 is an in-person event at Jakarta
+                Convention Center with selected sessions streamed online. All
+                registered participants will receive details in their confirmation
+                email.
+              </p>
+            </div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span class="faq-question">
+                5. Will session recordings be available?
+              </span>
+              <span class="faq-icon" aria-hidden="true">
+                <span class="faq-plus"></span>
+              </span>
+            </button>
+            <div class="faq-panel" role="region">
+              <p>
+                Yes. Most keynote and panel sessions will be recorded. A replay
+                link will be shared with confirmed attendees after the event so you
+                can revisit key insights with your teams.
+              </p>
+            </div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span class="faq-question">
+                6. How much does it cost to join?
+              </span>
+              <span class="faq-icon" aria-hidden="true">
+                <span class="faq-plus"></span>
+              </span>
+            </button>
+            <div class="faq-panel" role="region">
+              <p>
+                Ticket prices vary by category, with special early-bird rates
+                available for a limited time. Register through the form above and
+                you will receive an email with the pricing options.
+              </p>
+            </div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span class="faq-question">
+                7. How do I confirm my registration?
+              </span>
+              <span class="faq-icon" aria-hidden="true">
+                <span class="faq-plus"></span>
+              </span>
+            </button>
+            <div class="faq-panel" role="region">
+              <p>
+                After you submit the registration form, you will receive a
+                confirmation email with next steps. Make sure you click the
+                confirmation link in that email to secure your seat.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
     <footer aria-label="Footer">
       <div class="footer-inner">
         <div class="footer-meta">Organized by KOBO</div>
         <div class="footer-meta">© 2026</div>
       </div>
     </footer>
-    <div class="snackbar" id="snackbar" role="status" aria-live="polite"></div>
+    <div
+      class="register-success"
+      id="registration-success"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="registration-success-title"
+      aria-hidden="true"
+    >
+      <div class="register-success-backdrop" data-close="true"></div>
+      <div class="register-success-dialog">
+        <div class="register-success-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="11" fill="#22c55e" />
+            <path
+              d="M10.2 15.3 7.4 12.5a1 1 0 0 1 1.4-1.4l1.4 1.42 4-4.02a1 1 0 0 1 1.42 1.42l-4.7 4.76a1 1 0 0 1-1.46 0Z"
+              fill="#f9fafb"
+            />
+          </svg>
+        </div>
+        <h3 class="register-success-title" id="registration-success-title">
+          Hi, <span id="success-name"></span>!
+        </h3>
+        <p class="register-success-body">
+          Thank you for registering to Future Skills Forum 2025. We have sent you
+          confirmation email to
+          <strong id="success-email"></strong>.
+        </p>
+        <p class="register-success-body">Speak soon!</p>
+        <div class="register-success-actions">
+          <button class="register-success-close" id="success-close" type="button">
+            Confirm
+          </button>
+        </div>
+      </div>
+    </div>
     <script src="home.js"></script>
   </body>
 </html>

@@ -62,23 +62,47 @@
   const navLeft = document.querySelector(".nav-left");
   const indicator = document.querySelector(".nav-indicator");
   const form = document.querySelector("#register form");
-  const snackbar = document.querySelector("#snackbar");
-  if (!form || !snackbar) return;
+  const successOverlay = document.querySelector("#registration-success");
+  const successName = document.querySelector("#success-name");
+  const successEmail = document.querySelector("#success-email");
+  const successClose = document.querySelector("#success-close");
 
-  let t = 0;
+  if (form && successOverlay && successName && successEmail && successClose) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const name = (data.get("name") || "").toString().trim() || "there";
+      const email = (data.get("email") || "").toString().trim();
 
-  const show = (message) => {
-    window.clearTimeout(t);
-    snackbar.textContent = message;
-    snackbar.classList.add("is-open");
-    t = window.setTimeout(() => snackbar.classList.remove("is-open"), 4200);
-  };
+      successName.textContent = name;
+      successEmail.textContent = email;
+      successOverlay.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    });
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    show("Please check your email to confirm your parciticaption.");
-    form.reset();
-  });
+    const closeOverlay = () => {
+      successOverlay.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    };
+
+    successClose.addEventListener("click", () => {
+      form.reset();
+      closeOverlay();
+    });
+
+    successOverlay.addEventListener("click", (event) => {
+      const target = event.target;
+      if (target instanceof HTMLElement && target.dataset.close === "true") {
+        closeOverlay();
+      }
+    });
+
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && successOverlay.getAttribute("aria-hidden") === "false") {
+        closeOverlay();
+      }
+    });
+  }
 
   const setTheme = (mode) => {
     const isDark = mode === "dark";
@@ -211,5 +235,45 @@
   update();
   window.addEventListener("scroll", onScroll, { passive: true });
   window.addEventListener("resize", onScroll);
+})();
+
+(() => {
+  const faqList = document.querySelector(".faq-list");
+  if (!faqList) return;
+
+  const getItems = () => Array.from(document.querySelectorAll(".faq-item"));
+
+  const openItem = (targetItem) => {
+    getItems().forEach((item) => {
+      const trigger = item.querySelector(".faq-trigger");
+      const panel = item.querySelector(".faq-panel");
+      const expanded = item === targetItem;
+      item.classList.toggle("is-open", expanded);
+      if (trigger) {
+        trigger.setAttribute("aria-expanded", String(expanded));
+      }
+      if (panel) {
+        panel.hidden = !expanded;
+      }
+    });
+  };
+
+  faqList.addEventListener("click", (e) => {
+    const trigger = e.target.closest(".faq-trigger");
+    if (!trigger) return;
+    const item = trigger.closest(".faq-item");
+    if (!item) return;
+    e.preventDefault();
+    const isOpen = item.classList.contains("is-open");
+    openItem(isOpen ? null : item);
+  });
+
+  getItems().forEach((item) => {
+    const panel = item.querySelector(".faq-panel");
+    const trigger = item.querySelector(".faq-trigger");
+    const isOpen = item.classList.contains("is-open");
+    if (panel) panel.hidden = !isOpen;
+    if (trigger) trigger.setAttribute("aria-expanded", String(isOpen));
+  });
 })();
 
