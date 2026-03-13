@@ -9,10 +9,10 @@
 }
 
 body.theme-dark {
-  --page-bg: #020617;
+  --page-bg: #343a49;
   --page-text: #e5e7eb;
-  --surface-bg: #020617;
-  --nav-bg: rgba(15, 23, 42, 0.96);
+  --surface-bg: #343a49;
+  --nav-bg: rgba(52, 58, 73, 0.96);
 }
 
 * {
@@ -34,14 +34,37 @@ body {
     Arial, sans-serif;
   background: var(--page-bg);
   color: var(--page-text);
+  font-size: clamp(15px, 2.2vw, 16px);
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 100;
+  padding: 12px 20px;
+  background: #0f172a;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 16px;
+  outline: 3px solid #296eb4;
+  outline-offset: 2px;
 }
 
 .hero {
   min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   place-items: center;
   text-align: center;
-  padding: 56px 20px;
+  padding: clamp(32px, 6vw, 56px) clamp(16px, 4vw, 20px);
   position: relative;
   overflow: hidden;
   color: #ffffff;
@@ -60,7 +83,7 @@ body {
 
 h1 {
   margin: 0;
-  font-size: 56px;
+  font-size: clamp(32px, 6vw + 1rem, 56px);
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.02em;
@@ -245,7 +268,7 @@ body.theme-dark .hero-overlay {
 
 .speakers h2 {
   margin: 0 0 22px;
-  font-size: 34px;
+  font-size: clamp(26px, 4vw + 1rem, 34px);
   line-height: 1.2;
   letter-spacing: -0.02em;
   text-align: center;
@@ -563,7 +586,7 @@ body.theme-dark #agenda .timeline-card::before {
 
 .register h2 {
   margin: 0 0 18px;
-  font-size: 34px;
+  font-size: clamp(26px, 4vw + 1rem, 34px);
   line-height: 1.2;
   letter-spacing: -0.02em;
   text-align: center;
@@ -864,7 +887,11 @@ body.theme-dark .faq {
 .nav-link {
   border: none;
   background: transparent;
-  padding: 8px 12px;
+  padding: 10px 14px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 999px;
   font: inherit;
   font-size: 14px;
@@ -897,73 +924,88 @@ body.theme-dark .faq {
 .nav-toggle {
   position: relative;
   border: none;
-  padding: 2px;
-  width: 73px;
-  height: 32px;
+  padding: 5px;
+  width: 72px;
+  height: 36px;
   border-radius: 999px;
   cursor: pointer;
-  background: #020617;
+  background: #0f172a;
   display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 4px;
-  color: #e5e7eb;
-  transition: background-color 200ms ease, color 200ms ease;
+  justify-content: flex-start;
+  overflow: hidden;
+  color: #e2e8f0;
+  transition: background-color 250ms ease, box-shadow 250ms ease;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .nav-toggle:hover {
-  filter: brightness(1.05);
+  background: #1e293b;
+}
+
+.nav-toggle:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 2px;
 }
 
 .nav-toggle-track {
-  flex: 1 1 auto;
   position: relative;
-  z-index: 3;
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+}
+
+.nav-toggle-thumb {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  width: 26px;
+  height: 26px;
+  margin-top: -13px;
+  border-radius: 50%;
+  background: #f8fafc;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.35);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 6px;
+  justify-content: center;
+  transform: translateX(0);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms ease, box-shadow 250ms ease;
 }
 
 .nav-toggle-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
   width: 14px;
   height: 14px;
+  margin-left: -7px;
+  margin-top: -7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   opacity: 0;
-  transition: opacity 180ms ease;
+  transition: opacity 200ms ease;
 }
 
 .nav-toggle-icon img {
   width: 100%;
   height: 100%;
   display: block;
-}
-
-.nav-toggle-icon--sun img {
-  filter: invert(1);
+  object-fit: contain;
 }
 
 .nav-toggle-icon--moon img {
   filter: none;
 }
 
-.nav-toggle-thumb {
-  position: absolute;
-  top: 4px;
-  left: 2px;
-  width: 24px;
-  height: 24px;
-  border-radius: 999px;
-  background: #f9fafb;
-  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.45);
-  transform: translateX(0);
-  transition: transform 200ms ease, background-color 200ms ease,
-    box-shadow 200ms ease;
-  z-index: 2;
+.nav-toggle-icon--sun img {
+  filter: invert(1);
 }
 
+/* Dark mode: thumb left, moon visible */
 body.theme-dark .nav-toggle {
-  background: #020617;
-  color: #e5e7eb;
+  background: #0f172a;
 }
 
 body.theme-dark .nav-toggle-thumb {
@@ -978,19 +1020,27 @@ body.theme-dark .nav-toggle-icon--sun {
   opacity: 0;
 }
 
+/* Light mode: thumb right, sun visible */
 body:not(.theme-dark) .nav-toggle {
-  background: #d1d5db;
-  color: #020617;
+  background: #1e293b;
+}
+
+body:not(.theme-dark) .nav-toggle:hover {
+  background: #334155;
 }
 
 body:not(.theme-dark) .nav-toggle-thumb {
-  transform: translateX(45px);
-  background: #020617;
-  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.35);
+  transform: translateX(31px);
+  background: #f8fafc;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.25);
 }
 
 body:not(.theme-dark) .nav-toggle-icon--sun {
   opacity: 1;
+}
+
+body:not(.theme-dark) .nav-toggle-icon--sun img {
+  filter: brightness(0);
 }
 
 body:not(.theme-dark) .nav-toggle-icon--moon {
@@ -1018,7 +1068,11 @@ body:not(.theme-dark) .nav-toggle-icon--moon {
 }
 
 .nav-shell.is-sticky .nav-toggle {
-  background: #0ea5e9;
+  background: #0f172a;
+}
+
+.nav-shell.is-sticky .nav-toggle:hover {
+  background: #1e293b;
 }
 
 footer {
@@ -1028,7 +1082,7 @@ footer {
 }
 
 body.theme-dark footer {
-  background: #020617;
+  background: #343a49;
 }
 
 .footer-inner {
@@ -1286,4 +1340,66 @@ body.theme-dark .register-success-dialog {
   color: #f9fafb;
 }
 
+/* ---- Responsive design ---- */
+@media (max-width: 480px) {
+  .hero-inner {
+    gap: 16px;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .meta {
+    font-size: 14px;
+  }
+
+  .speakers,
+  .register {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .speaker-card {
+    max-width: none;
+  }
+
+  .nav-bar {
+    padding: 8px 12px;
+    width: calc(100% - 24px);
+  }
+
+  .nav-link {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 900px) {
+  .speakers-inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.cta,
+.submit,
+.faq-trigger,
+.nav-toggle {
+  min-height: 44px;
+}
+
+.nav-toggle {
+  min-width: 44px;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit {
+  padding: 12px 24px;
+}
 

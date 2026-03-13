@@ -3,7 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Future Skills Forum 2025</title>
+    <title>Future Skills Forum 2025 | AI, Digital Transformation &amp; Future Workforce</title>
+    <meta name="description" content="Future Skills Forum 2025 — July 15, Jakarta Convention Center. The conference for AI, digital transformation, and the future workforce. Register now." />
+    <meta name="theme-color" content="#296eb4" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Future Skills Forum 2025" />
+    <meta property="og:description" content="The conference for AI, digital transformation, and the future workforce. July 15, 2025, Jakarta Convention Center." />
+    <link rel="canonical" href="https://example.com/" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,9 +18,32 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Future Skills Forum 2025",
+      "description": "The conference for AI, digital transformation, and the future workforce.",
+      "startDate": "2025-07-15T09:00:00+07:00",
+      "location": {
+        "@type": "Place",
+        "name": "Jakarta Convention Center",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Jakarta",
+          "addressCountry": "ID"
+        }
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "KOBO"
+      }
+    }
+    </script>
   </head>
   <body>
-    <header class="nav-shell" aria-label="Primary">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="nav-shell" aria-label="Primary navigation">
       <nav class="nav-bar">
         <div class="nav-left">
           <span class="nav-indicator" aria-hidden="true"></span>
@@ -23,31 +52,33 @@
           <button class="nav-link" data-target="#agenda" type="button">Agenda</button>
         </div>
         <div class="nav-right">
-          <button class="nav-toggle" id="theme-toggle" type="button" aria-pressed="false">
+          <button class="nav-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode">
             <span class="nav-toggle-track" aria-hidden="true">
-              <span class="nav-toggle-icon nav-toggle-icon--moon">
-                <img src="icons/moon.svg" alt="" />
-              </span>
-              <span class="nav-toggle-icon nav-toggle-icon--sun">
-                <img src="icons/sun.svg" alt="" />
+              <span class="nav-toggle-thumb" aria-hidden="true">
+                <span class="nav-toggle-icon nav-toggle-icon--moon">
+                  <img src="icons/moon.svg" alt="" />
+                </span>
+                <span class="nav-toggle-icon nav-toggle-icon--sun">
+                  <img src="icons/sun.svg" alt="" />
+                </span>
               </span>
             </span>
-            <span class="nav-toggle-thumb" aria-hidden="true"></span>
           </button>
         </div>
       </nav>
     </header>
-    <main class="hero" id="hero">
-      <div class="hero-media" aria-hidden="true">
-        <img src="img/1.jpg" alt="" class="is-active" />
-        <img src="img/2.jpg" alt="" />
-        <img src="img/3.jpg" alt="" />
-        <img src="img/4.jpg" alt="" />
-        <img src="img/5.jpg" alt="" />
-      </div>
+    <main id="main-content">
+      <section class="hero" id="hero" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true">
+          <img src="img/1.jpg" alt="" class="is-active" />
+          <img src="img/2.jpg" alt="" />
+          <img src="img/3.jpg" alt="" />
+          <img src="img/4.jpg" alt="" />
+          <img src="img/5.jpg" alt="" />
+        </div>
       <div class="hero-overlay" aria-hidden="true"></div>
-      <section class="hero-inner" aria-label="Hero">
-        <h1>Future Skills Forum 2025</h1>
+        <div class="hero-inner">
+          <h1 id="hero-title">Future Skills Forum 2025</h1>
         <p class="subtitle">
           The conference for AI, digital transformation, and the future workforce
         </p>
@@ -91,10 +122,9 @@
 
         </div>
       </section>
-    </main>
-    <section class="speakers" id="speakers" aria-label="Speakers">
+      <section class="speakers" id="speakers" aria-labelledby="speakers-heading">
       <div class="speakers-inner">
-        <h2>Speakers</h2>
+        <h2 id="speakers-heading">Speakers</h2>
         <div class="speaker-grid">
           <article class="speaker-card">
             <div class="speaker-card-image">
@@ -154,11 +184,11 @@
           </article>
         </div>
       </div>
-    </section>
-    <section class="speakers" id="agenda" aria-label="Agenda timeline">
+      </section>
+      <section class="speakers" id="agenda" aria-labelledby="agenda-heading">
       <div class="speakers-inner">
         <div class="timeline">
-          <h2>Agenda</h2>
+          <h2 id="agenda-heading">Agenda</h2>
           <ol class="timeline-list">
             <li class="timeline-item">
               <div class="timeline-flag">
@@ -278,10 +308,10 @@
           </ol>
         </div>
       </div>
-    </section>
-    <section class="register" id="register" aria-label="Registration form">
+      </section>
+      <section class="register" id="register" aria-labelledby="register-heading">
       <div class="register-inner">
-        <h2>Registration</h2>
+        <h2 id="register-heading">Registration</h2>
         <div class="register-card">
           <form>
             <div class="form-grid">
@@ -311,10 +341,10 @@
           </form>
         </div>
       </div>
-    </section>
-    <section class="faq" id="faq" aria-label="Frequently asked questions">
+      </section>
+      <section class="faq" id="faq" aria-labelledby="faq-heading">
       <div class="faq-inner">
-        <h2>FAQ</h2>
+        <h2 id="faq-heading">FAQ</h2>
         <p class="faq-intro">
           Answers to common questions about Future Skills Forum 2025.
         </p>
@@ -441,8 +471,9 @@
           </article>
         </div>
       </div>
-    </section>
-    <footer aria-label="Footer">
+      </section>
+    </main>
+    <footer aria-label="Site footer">
       <div class="footer-inner">
         <div class="footer-column footer-social">
           <h3 class="footer-heading">Follow our community</h3>
