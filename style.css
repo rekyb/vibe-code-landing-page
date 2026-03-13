@@ -1004,22 +1004,143 @@ body:not(.theme-dark) .nav-toggle-icon--moon {
 footer {
   background: #296eb4;
   color: #ffffff;
-  padding: 26px 20px;
+  padding: 32px 20px 20px;
+}
+
+body.theme-dark footer {
+  background: #020617;
 }
 
 .footer-inner {
   max-width: 1100px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px 40px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.footer-column {
+  text-align: left;
+}
+
+.footer-heading {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.95;
+}
+
+.footer-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-social-link {
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 10px 18px;
+  gap: 12px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  opacity: 0.95;
+  transition: opacity 0.2s ease;
+}
+
+.footer-social-link:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.footer-social-link:hover .footer-social-label {
+  text-decoration: underline;
+}
+
+.footer-social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.footer-social-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-social-label {
+  font-weight: 500;
+}
+
+.footer-org-name {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.footer-address {
+  margin: 0;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+.footer-address .footer-address-line {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.footer-address a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 4px;
+}
+
+.footer-address a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 16px;
   text-align: center;
 }
 
-.footer-meta {
-  opacity: 0.95;
+.footer-copyright {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+@media (max-width: 640px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .footer-column {
+    text-align: center;
+  }
+
+  .footer-links {
+    align-items: center;
+  }
+
+  .footer-social-link {
+    justify-content: center;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

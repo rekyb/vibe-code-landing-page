@@ -276,4 +276,3 @@
     if (trigger) trigger.setAttribute("aria-expanded", String(isOpen));
   });
 })();
-
